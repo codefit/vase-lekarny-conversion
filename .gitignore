@@ -20,7 +20,15 @@ storage/*.key
 Homestead.yaml
 Homestead.json
 /.vagrant
+
+# PHPUnit
 .phpunit.result.cache
+.phpunit.cache
+coverage.xml
+*.coverage
+coverage/
+.coverage/
+phpunit.xml.dist
 
 /public/build
 /storage/pail
