@@ -7,7 +7,7 @@ use VaseLekarny\Exceptions\ApiException;
 class Requester
 {
     private string $apiKey;
-    private string $baseUrl = 'https://vase-lekarny.cz/api/v1/conversion/';
+    private string $baseUrl = 'https://www.vase-lekarny.cz/api/v1/conversion';
 
     public function __construct(string $apiKey)
     {
@@ -35,10 +35,10 @@ class Requester
             CURLOPT_HTTPHEADER => [
                 'Content-Type: application/json',
                 'Authorization: Bearer ' . $this->apiKey,
-                'Accept: application/json'
+                'Accept: application/json',
             ]
         ]);
-
+  
         $response = curl_exec($ch);
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         
